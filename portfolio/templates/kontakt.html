@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grzegorzaleksander</title>
+    <link rel="stylesheet" href="{% static 'switch.css' %}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+        }
+        
+        .content {
+            margin-top: 150px;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    
+    <div class="content">
+        {% if lang == 'en' %}
+            To fill in...
+        {% else %} 
+            Pozostaje wypełnić...            
+        {% endif %}
+    </div>
+</body>
+</html>
