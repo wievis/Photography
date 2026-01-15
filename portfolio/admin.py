@@ -5,8 +5,8 @@ from .models import Photo, Visitor
 
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
-    list_display = ['id', 'order', 'aparat', 'ogniskowa', 'naswietlanie', 'created']
-    list_editable = ['order', 'aparat', 'ogniskowa', 'naswietlanie']
+    list_display = ['id', 'order', 'created']
+    list_editable = ['order']
     readonly_fields = ['created']
     formfield_overrides = {
         models.CharField: {'widget': TextInput(attrs={'size': '15'})},

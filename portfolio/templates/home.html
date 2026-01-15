@@ -156,26 +156,6 @@
         {% for photo in photos %}
         <div class="photo" onclick="openLightbox({{ forloop.counter0 }})">
             <img src="{{ photo.image.url }}" alt="" loading="lazy">
-            {% comment %} <div class="photo-info">
-                {% if photo.aparat %}
-                <div class="photo-info-item">
-                    <span class="photo-info-label">Aparat:</span>
-                    <span class="photo-info-value">{{ photo.aparat }}</span>
-                </div>
-                {% endif %}
-                {% if photo.ogniskowa %}
-                <div class="photo-info-item">
-                    <span class="photo-info-label">Ogniskowa:</span>
-                    <span class="photo-info-value">{{ photo.ogniskowa }}</span>
-                </div>
-                {% endif %}
-                {% if photo.naswietlanie %}
-                <div class="photo-info-item">
-                    <span class="photo-info-label">Naświetlanie:</span>
-                    <span class="photo-info-value">{{ photo.naswietlanie }}</span>
-                </div>
-                {% endif %}
-            </div> {% endcomment %}
         </div>
         {% endfor %}
     </div>
