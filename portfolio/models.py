@@ -1,8 +1,7 @@
 from django.db import models
-from cloudinary.models import CloudinaryField
 
 class Photo(models.Model):
-    image = CloudinaryField('image', folder='photography_portfolio_page')
+    image = models.ImageField(upload_to='photography_portfolio_page')
     order = models.IntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
     
