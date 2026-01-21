@@ -88,7 +88,7 @@
     <script>
         window.photos = [
             {% for photo in photos %}
-            "{{ photo.image.url }}"{% if not forloop.last %},{% endif %}
+            "{{ photo.thumbnail.url }}"{% if not forloop.last %},{% endif %}
             {% endfor %}
         ];
     </script>
@@ -98,7 +98,7 @@
     <div class="gallery-grid">
         {% for photo in photos %}
         <div class="photo-thumb" onclick="openLightbox({{ forloop.counter0 }})">
-            <img src="{{ photo.image.url }}" alt="" loading="lazy">
+            <img src="{{ photo.thumbnail.url }}" alt="" loading="lazy">
         </div>
         {% endfor %}
     </div>

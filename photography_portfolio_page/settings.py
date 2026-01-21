@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'storages',
     'portfolio',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -95,3 +96,5 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('R2_BUCKET_NAME')
 AWS_S3_ENDPOINT_URL = os.environ.get('R2_ENDPOINT_URL')
 AWS_S3_CUSTOM_DOMAIN = os.environ.get('R2_CUSTOM_DOMAIN')
 AWS_QUERYSTRING_AUTH = False
+
+IMAGEKIT_CACHEFILE_NAMER = 'imagekit.cachefiles.namers.source_name_as_path'
