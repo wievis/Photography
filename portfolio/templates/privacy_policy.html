@@ -1,27 +1,22 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polityka Prywatności | grzegorzaleksander</title>
-    <link rel="stylesheet" href="{% static 'switch.css' %}">
-    <link rel="icon" type="image/svg+xml" href="{% static 'aparat.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/switch.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="icon" type="image/svg+xml" href="{% static 'svg/aparat.svg' %}">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #000; color: #fff; margin-left: 280px; transition: all 0.3s ease;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #000; color: #fff; transition: all 0.3s ease; }
         body.light-mode { background: #fff; color: #222; }
         .content { padding: 4rem; max-width: 900px; line-height: 1.6; }
         h1 { font-weight: 600; letter-spacing: 0.1em; margin-bottom: 2rem; font-size: 1.5rem; }
         h2 { font-weight: 600; margin: 2rem 0 1rem; font-size: 1.1rem; opacity: 0.9; }
         p { opacity: 0.7; margin-bottom: 1rem; font-weight: 300; }
-        @media (max-width: 768px) {
-            body { margin-left: 0; margin-top: 150px; }
-            .content { padding: 2rem; }
-        }
+        @media (max-width: 768px) { .content { padding: 2rem; margin-top: 150px; } }
     </style>
 </head>
 <body>
@@ -29,44 +24,32 @@
     <div class="content">
         {% if lang == 'en' %}
             <h1>PRIVACY POLICY</h1>
-
             <p>This policy describes the principles of processing technical information generated while using the website.</p>
-
             <h2>1. COLLECTED DATA</h2>
             <p>The website processes technical data sent automatically by the browser, including IP address, device parameters, operating system, and referral source (Referer).</p>
-
             <h2>2. COOKIES</h2>
             <p>The website does not use marketing or tracking cookies. It may use technically necessary cookies required for the proper functioning of the service.</p>
-
             <h2>3. PURPOSE OF PROCESSING</h2>
             <p>Data is processed solely for traffic analysis, performance optimization, and ensuring the security of the website.</p>
-
             <h2>4. DATA CONTROLLER</h2>
             <p>The data controller is the owner of the grzegorzaleksander website. Data is processed in accordance with Article 6(1)(f) of the GDPR as the legitimate interest of the controller.</p>
-
             <h2>5. USER RIGHTS</h2>
             <p>Users have the right to access, restrict, erase, or object to the processing of their personal data. Contact regarding data protection matters is possible via electronic means.</p>
-
         {% else %}
             <h1>POLITYKA PRYWATNOŚCI</h1>
-
             <p>Niniejsza polityka określa zasady przetwarzania informacji technicznych generowanych podczas korzystania z serwisu.</p>
-
             <h2>1. GROMADZONE DANE</h2>
             <p>Serwis przetwarza dane techniczne przesyłane automatycznie przez przeglądarkę, w szczególności adres IP, parametry urządzenia, system operacyjny oraz źródło przekierowania (Referer).</p>
-
             <h2>2. PLIKI COOKIES</h2>
             <p>Witryna nie wykorzystuje plików cookies do celów marketingowych ani śledzących. Może natomiast stosować techniczne pliki cookies niezbędne do prawidłowego działania serwisu.</p>
-
             <h2>3. CEL PRZETWARZANIA</h2>
             <p>Dane są przetwarzane wyłącznie w celu analizy ruchu, optymalizacji wydajności oraz zapewnienia bezpieczeństwa serwisu.</p>
-
             <h2>4. ADMINISTRATOR DANYCH</h2>
             <p>Administratorem danych jest właściciel serwisu grzegorzaleksander. Dane przetwarzane są na podstawie art. 6 ust. 1 lit. f RODO jako prawnie uzasadniony interes administratora.</p>
-
             <h2>5. PRAWA UŻYTKOWNIKA</h2>
             <p>Użytkownik ma prawo dostępu do danych, ich ograniczenia, usunięcia oraz wniesienia sprzeciwu wobec przetwarzania. Kontakt w sprawach związanych z ochroną danych możliwy jest drogą elektroniczną.</p>
         {% endif %}
     </div>
+    <script src="{% static 'js/nav.js' %}" defer></script>
 </body>
 </html>
