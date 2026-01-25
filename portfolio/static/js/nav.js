@@ -1,14 +1,24 @@
 const themeToggle = document.getElementById('theme-toggle');
 const langToggle = document.getElementById('lang-toggle');
 
-if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    if (themeToggle) themeToggle.checked = false;
+} else {
+    document.body.classList.remove('dark-mode');
     if (themeToggle) themeToggle.checked = true;
 }
 
 themeToggle?.addEventListener('change', function() {
-    document.body.classList.toggle('light-mode', this.checked);
-    localStorage.setItem('theme', this.checked ? 'light' : 'dark');
+    if (this.checked) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    }
 });
 
 langToggle?.addEventListener('change', function() {

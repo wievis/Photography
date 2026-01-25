@@ -4,9 +4,19 @@
 <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
 <style>
     .gallery { padding: 3rem; max-width: 1400px; margin: 0 auto; }
-    .photo { margin-bottom: 2rem; cursor: pointer; background: #1a1a1a; padding: 5% 5% 15% 5%; transition: transform 0.3s; box-shadow: 0 1px 3px rgba(255,255,255,0.08); }
+    .photo { 
+        margin-bottom: 2rem; 
+        cursor: pointer; 
+        background: #fff; 
+        padding: 5% 5% 15% 5%; 
+        transition: transform 0.3s, background 0.5s, box-shadow 0.5s; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12); 
+    }
     .photo:hover { transform: scale(1.002) rotateX(2deg); }
-    body.light-mode .photo { background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+    body.dark-mode .photo { 
+        background: #1a1a1a; 
+        box-shadow: 0 1px 3px rgba(255,255,255,0.08); 
+    }
     .photo img { width: 100%; height: auto; display: block; }
     @media (max-width: 768px) { body { margin-top: 150px; } .gallery { padding: 1.5rem; } }
 </style>
