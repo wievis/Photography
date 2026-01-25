@@ -22,7 +22,13 @@
     </style>
 </head>
 <body>
-    <script>window.photos = [{% for photo in photos %}"{{ photo.thumbnail.url }}"{% if not forloop.last %},{% endif %}{% endfor %}];</script>
+    <script>
+        window.photos = [
+            {% for photo in photos %}
+            { thumb: "{{ photo.thumbnail.url }}", full: "{{ photo.image.url }}" }{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        ];
+    </script>
     {% include 'nav.html' %}
     <div class="gallery">
         {% for photo in photos %}
