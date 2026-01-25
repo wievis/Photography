@@ -1,0 +1,20 @@
+.menu { position: fixed; top: 0; left: 0; bottom: 0; width: 250px; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); padding: 2rem; z-index: 1001; border-right: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+.menu-top { display: flex; flex-direction: column; gap: 3rem; }
+.logo { display: flex; flex-direction: column; gap: 4rem; }
+.logo-name { font-size: 1.3rem; font-weight: 600; letter-spacing: 0.1em; margin-bottom: 0.3rem; }
+.logo-name a { color: #fff; text-decoration: none; }
+.logo-title { font-size: 0.6rem; font-weight: 500; color: #888; letter-spacing: 0.15em; }
+nav { display: flex; flex-direction: column; gap: 2rem; }
+nav a { color: #fff; text-decoration: none; font-size: 1.2rem; font-weight: 100; letter-spacing: 0.2em; opacity: 0.6; transition: opacity 0.3s; }
+nav a:hover, nav a.active { opacity: 1; }
+.menu-bottom { padding-top: 2rem; }
+.menu-bottom > div { display: flex; flex-direction: row; gap: 1rem; }
+body.light-mode .menu { background: rgba(255,255,255,0.95); border-right: 1px solid rgba(0,0,0,0.1); }
+body.light-mode .logo-name a, body.light-mode nav a { color: #222; }
+body.light-mode .logo-title { color: #666; }
+body { margin-left: 280px; }
+@media (max-width: 768px) {
+    .menu { position: fixed; top: 0; left: 0; right: 0; bottom: auto; width: auto; padding: 1.5rem 0.2rem 0.2rem 1.5rem; border-right: none; border-bottom: 0.4px solid rgba(255,255,255,0.1); z-index: 1002; }
+    nav { flex-direction: row; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+    body { margin-left: 0; }
+}

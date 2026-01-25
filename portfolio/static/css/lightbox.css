@@ -1,0 +1,18 @@
+.lightbox { display: none; position: fixed; top: 0; left: 280px; right: 0; bottom: 0; background: rgba(0,0,0,0.98); z-index: 1000; }
+.lightbox.active { display: block; }
+.lightbox-left, .lightbox-right { position: absolute; top: 0; width: 50%; height: 100%; z-index: 2; cursor: pointer; }
+.lightbox-left { left: 0; cursor: w-resize; }
+.lightbox-right { right: 0; cursor: e-resize; }
+.lightbox-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95%; height: 95%; pointer-events: none; z-index: 1; display: flex; align-items: center; justify-content: center; }
+.lightbox-content img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.close, .nav-btn { position: absolute; color: #fff; cursor: pointer; opacity: 0.6; transition: 0.3s; z-index: 3; }
+.close { top: 2rem; right: 2rem; font-size: 3rem; }
+.nav-btn { top: 50%; transform: translateY(-50%); font-size: 3rem; }
+.prev { left: 2rem; }
+.next { right: 2rem; }
+body.light-mode .lightbox { background: rgba(255,255,255,0.98); }
+body.light-mode .close, body.light-mode .nav-btn { color: #222; }
+@media (max-width: 768px) {
+    .lightbox { left: 0; top: 0; }
+    .lightbox-content { height: calc(100vh - var(--menu-height, 120px)); top: calc(50% + var(--menu-height, 120px) / 2); }
+}
