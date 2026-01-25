@@ -1,18 +1,12 @@
-# urls.py (główny)
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from portfolio import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('en/', views.home, {'lang': 'en'}, name='home_en'),
-    path('kontakt/', views.kontakt, name='kontakt'),
-    path('en/contact/', views.kontakt, {'lang': 'en'}, name='kontakt_en'),
-    path('galeria/', views.galeria, name='galeria'),
-    path('en/gallery/', views.galeria, {'lang': 'en'}, name='galeria_en'),
-    path('polityka-prywatnosci/', views.privacy_policy, name='privacy_policy'),
-    path('en/privacy-policy/', views.privacy_policy, {'lang': 'en'}, name='privacy_policy_en'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('', include('portfolio.urls')),
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
