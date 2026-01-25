@@ -9,11 +9,11 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('en/', views.home, {'lang': 'en'}, name='home_en'),
     path('kontakt/', views.kontakt, name='kontakt'),
-    path('en/contact/', views.kontakt, {'lang': 'en'}, name='kontakt_en'),
+    path('en/kontakt/', views.kontakt, {'lang': 'en'}, name='kontakt_en'),
     path('galeria/', views.galeria, name='galeria'),
-    path('en/gallery/', views.galeria, {'lang': 'en'}, name='galeria_en'),
+    path('en/galeria/', views.galeria, {'lang': 'en'}, name='galeria_en'),
     path('polityka-prywatnosci/', views.privacy_policy, name='privacy_policy'),
-    path('en/privacy-policy/', views.privacy_policy, {'lang': 'en'}, name='privacy_policy_en'),
+    path('en/polityka-prywatnosci/', views.privacy_policy, {'lang': 'en'}, name='privacy_policy_en'),
 ]
 
 if not settings.DEBUG:
