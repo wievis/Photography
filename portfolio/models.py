@@ -19,7 +19,7 @@ class Photo(models.Model):
     
 class Visitor(models.Model):
     ip = models.GenericIPAddressField()
-    ua = models.TextField()
+    ua = models.TextField(null=True, blank=True)
     ref = models.TextField(null=True)
     country = models.CharField(max_length=100, null=True)
     at = models.DateTimeField(auto_now_add=True)
