@@ -8,15 +8,10 @@
     <meta name="description" content="{% if lang == 'en' %}Professional portrait, event, and art photography.{% else %}Profesjonalna fotografia portretowa, eventowa i artystyczna.{% endif %}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.grzegorzaleksander.pl{{ request.path }}">
-    <link rel="icon" type="image/svg+xml" href="{% static 'svg/aparat.svg' %}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.grzegorzaleksander.pl{{ request.path }}">
-    <meta property="og:title" content="Grzegorz Aleksander | Photography">
-    <meta property="og:description" content="{% if lang == 'en' %}Professional photography portfolio.{% else %}Profesjonalne portfolio fotograficzne.{% endif %}">
-    <meta property="og:image" content="https://www.grzegorzaleksander.pl{% static 'svg/aparat.svg' %}">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Grzegorz Aleksander | Photography">
-    <meta property="twitter:image" content="https://www.grzegorzaleksander.pl{% static 'svg/aparat.svg' %}">
+    
+    <link rel="shortcut icon" href="https://www.grzegorzaleksander.pl/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://www.grzegorzaleksander.pl/static/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="{% static 'css/switch.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
     {% block extra_css %}{% endblock %}
