@@ -10,19 +10,19 @@
             <nav>
                 {% if lang == 'en' %}
                     <a href="/en/">PRESENTATION</a>
-                    <a href="/en/gallery">GALLERY</a>
+                    {% comment %} <a href="/en/gallery">GALLERY</a> {% endcomment %}
                     <a href="/en/contact/">CONTACT</a>
                 {% else %}
                     <a href="/">PREZENTACJA</a>
-                    <a href="/galeria">GALERIA</a>
+                    {% comment %} <a href="/galeria">GALERIA</a> {% endcomment %}
                     <a href="/kontakt/">KONTAKT</a>
                 {% endif %}
-                <div class="menu-bottom">
+                {% comment %} <div class="menu-bottom">
                     <div>
                         <input type="checkbox" class="checkbox lang-toggle" role="switch" id="lang-toggle" {% if lang == 'pl' %}checked{% endif %} />
                         <input type="checkbox" class="checkbox" role="switch" id="theme-toggle" />
                     </div>
-                </div>
+                </div> {% endcomment %}
             </nav>
         </div>
     </div>

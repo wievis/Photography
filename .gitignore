@@ -8,3 +8,9 @@ media/
 staticfiles/
 .vscode/
 .idea/
+
+# Pliki z sekretami i kluczami
+token.json
+credentials.json
+*.json
+!package.json
