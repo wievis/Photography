@@ -14,6 +14,7 @@ urlpatterns = [
     path('en/gallery/', views.galeria, {'lang': 'en'}, name='gallery_en'),
     path('polityka-prywatnosci/', views.privacy_policy, name='privacy_policy'),
     path('en/privacy-policy/', views.privacy_policy, {'lang': 'en'}, name='privacy_policy_en'),
+    path('mck/', views.mck, name='mck'),
 ]
 
 if not settings.DEBUG:

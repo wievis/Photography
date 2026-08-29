@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="{% if lang %}{{ lang }}{% else %}pl{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pracownia Fotografii MCK</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: 4px;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+        .info {
+            font-size: 1.2rem;
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+        .days {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .contact {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            border-top: 1px dotted #ffffff;
+            padding-top: 20px;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Pracownia Fotografii</h1>
+    
+    <div class="info">
+        <span class="days">ŚRODY:</span> 17:00 – 21:00<br>
+        <span class="days">SOBOTY:</span> 16:00 – 22:00
+    </div>
+
+    <div class="contact">
+        Miejskie Centrum Kultury GOSTYNIN<br>
+        <a href="tel:459117669">459 117 669</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -12,10 +12,12 @@
                     <a href="/en/">PRESENTATION</a>
                     {% comment %} <a href="/en/gallery">GALLERY</a> {% endcomment %}
                     <a href="/en/contact/">CONTACT</a>
+                    <a href="{% url 'mck' %}">MIEJSKIE CENTRUM KULTURY</a>
                 {% else %}
                     <a href="/">PREZENTACJA</a>
                     {% comment %} <a href="/galeria">GALERIA</a> {% endcomment %}
                     <a href="/kontakt/">KONTAKT</a>
+                    <a href="{% url 'mck' %}">MIEJSKIE CENTRUM KULTURY</a>
                 {% endif %}
                 {% comment %} <div class="menu-bottom">
                     <div>

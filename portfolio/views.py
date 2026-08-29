@@ -12,3 +12,6 @@ def kontakt(request, lang='en'):
 
 def privacy_policy(request, lang='en'):
     return render(request, 'privacy_policy.html', {'lang': lang})
+
+def mck(request, lang='en'):
+    return render(request, 'mck.html', {'lang': lang})
